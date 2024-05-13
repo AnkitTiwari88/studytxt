@@ -1,0 +1,50 @@
+TestNG Grouping:
+
+grouping: 
+achieve in xml file
+
+**
+Parameterizantion--
+2 types of parameterizantion supported bt testng
+
+2 different ways:
+1.@DateProvider-- to acheieve parameterizantion 
+data provider method generate the data and pass the data into another test method which data u want to repaet u get the data into the method
+
+without using looping staement we can still repeat the method multiple times
+InvocationCount : we can execute the test method in multiple times
+
+Exhaustive testing : If some particular functions may not be stable and sometimes it will not work so identify such type of senario or bugs he will execute the same steps multiple times
+
+sometime functionality should broke 
+
+in this time to identify bugs of senarioand execute the test cases using invocationcount.
+
+
+
+2.xml --- parallel testing(same test cases in multiple browser)
+
+cross browser testing : one test case u can check multiple browser in serial and parllel way
+
+steps
+1.create test case
+2.create xml file to run the test
+3.pass browser name parameter from the xml to setup() method
+4.execute test case on chrome & Edge(serial execution)
+5.execute test case on chrome & Edge(parallel execution)
+
+
+
+reduce lot of time
+
+data driven testing:
+
+data from xml sheet using util file-->generate two arary in data provider-->go to method(method iterate multiple times without using loop)
+
+q.use of dataprovider?
+
+
+
+
+
+

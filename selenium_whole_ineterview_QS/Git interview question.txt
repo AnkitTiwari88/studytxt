@@ -1,0 +1,174 @@
+Git interview question:
+
+
+1.Git
+
+Git is a free and open source distributed control system which enables you to store ,track revison history,merge code changes and revert to earlier code version when needed.
+
+2.Version control system:
+
+it is a collection of software tools that help a team to work together on the same project and allow them to manage changes to a file or set od data over time.
+
+It maintains all the edits and historic versions of the project.
+
+3.Why Git is a distributed version control system?
+
+Git is a remote repository which is stored in a server and local repository which stored in computer ,code is present in every developers computer thats why it is called as distributed version control system.
+
+4. Difference between Git and Github
+
+Git:
+1.it is software
+2.It is installed locally on system 
+3.It is a high quality version control system
+4.it is distributed version control system for tracking changes in source code during software development
+
+5.It is focused on verrsion control and code sharing
+
+Github:
+1.It is a service
+2.It is hosted in the web
+3.it is cloud based hosting service
+4.it provides hosting for software development and version control using Git
+
+5.it focused on centralized source code hosting
+
+
+5.Mention the various Git repository hosting services
+Github
+Gitlab
+Bitbucket
+SourceForge
+GitEnterprise
+LaunchPad
+Perforce
+Beanstalk
+Assembla
+
+6.Git repository
+
+Git repository is a place where all ther git files are stored
+These files can either be stored on the local repository or on the remote repository
+It allows us to to save versions of our code which we can access whenever needed
+
+7.Howe can u initialize a repository in git?
+
+Using git init command
+
+8.What are the states of a file in Git?
+
+Three different states:
+1.Modified
+2.Staged
+3.Committed
+
+9. What is staging area in Git?
+
+Staging area is the intermediate area between working directory and repostory.
+it helps to format and review commits 
+
+10. name a few Git commands with usages:
+
+git init: to initialize empty git repository
+
+git config: to configure a username and email address
+
+git add: to add one or more files tobthe staging area
+
+git diff: to view the changes made to a file
+
+git commit: to commit changes to head but not to the remote repositoiry
+
+git log : list the version history for the current branch
+
+git checkout[branch name] : used to switch one branch to another
+
+
+11.what is advantages of using git?
+
+1.distributed manner of developmentr and easy team collaboration
+2.Widespread acceptanced
+3.Maintains the itegrity of source code
+4.branch capabilities
+5.faster releases cycles
+
+
+12.which command is used for writing  a "commit" message in Git?
+
+git commit -m "commit message"
+
+
+13.What does git pull origin master do?
+
+It fetches all the changes from the master branch onto the origin and integrates then into the local branch
+
+git pull = git fetch + git merge origin/master.
+
+
+
+14. git  push command :
+ it is used to push a command between local repository to remote repository.once developer change local repository then developer push command to remote team members for knowing this.
+
+
+15.what is the difference between git pull and git fetch?
+
+git pull = git fetch +git merge
+
+
+
+
+command 
+get fetch origin 
+get fetch -all
+
+command -
+git pull origin master
+
+
+16.Git clone:
+git clone allows u to create a local copy of the remote GitHub repository
+
+17.Git stash:
+Git stash represents the presest state of the working directory and index it and keeps it on the stack at a later stage
+
+It return a clean working directory.
+
+18.git reset--mixed : is used to undo changes made in the working directory and staging area.
+
+git merge --abort: is used to stop the merge process and return back to the state before the merging begin.
+
+19.How to u find a list of files that has been changed in a particular commit?
+
+git diff-tree -r{commit hash}
+
+20.what is the functionality og git clean command?
+
+The git clean command removes the untracked files from the working directory.
+
+21. what is the difference between fork,branch,clone ?
+
+A fork is a copy of repository that you manage.Fork let you make changes to a project without affecting the original repository.
+
+Git cloning meams pointing to an existing repository and make a copy of that repository in a new directory at some other location.
+
+In Git, a branch is a new/separate version of the main repository.
+
+
+22.How to you resolve conflicts in Git?
+
+1.Identify the files responsible for the conflicts.
+2.Implemente the desired changes to the files
+3.Add the files using the git add command
+4.The last step is to commit the changes in the file with the help of the git commit command
+
+23.What is the command used to fix a broken commit?
+
+git commit --amend
+git commit --amend -m "Revised commit message"
+
+24.How you reveret a commit command that has already been pushed and made public?
+
+git revert<commit id>
+git commit -m"commit message"
+
+

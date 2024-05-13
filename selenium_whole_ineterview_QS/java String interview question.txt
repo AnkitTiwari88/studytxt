@@ -1,0 +1,112 @@
+************** java String **************
+
+java String :In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string. 
+
+For example:
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};  
+String s=new String(ch);  
+
+1. How to declare a string in Java?
+String declaration in Java can be done in two ways:
+
+By string literal: Double quotes are used to create Java String literals. 
+Example: String str= "Scaler";  
+
+By new keyword: Keyword "new" is used to create a Java string.
+Example: String str=new String ("Scaler");
+
+2.String pool in Java.
+
+String Pool, also known as SCP (String Constant Pool), is a special storage space in Java heap memory that is used to store unique string objects. Whenever a string object is created, it first checks whether the String object with the same string value is already present in the String pool or not, and if it is available, then the reference to the string object from the string pool is returned. Otherwise, the new string object is added to the string pool, and the respective reference will be returned.
+
+3.What is the difference between str1 == str2 and str1.equals(str2)?
+Java offers both the equals() method and the "==" operator for comparing objects. However, here are some differences between the two:
+
+Essentially, equals() is a method, while == is an operator.
+The == operator can be used for comparing references (addresses) and the .equals() method can be used to compare content. To put it simply, == checks if the objects point to the same memory location, whereas .equals() compares the values of the objects.
+
+4.Difference between String and StringBuffer
+
+            String	                                                                             StringBuffer
+1)The String class is immutable.	                                              The StringBuffer class is mutable.
+2)String is slow and consumes more memory
+ when we concatenate too many strings because every time it creates new instance.     StringBuffer is fast and consumes less memory when we concatenate t strings.
+3)String class overrides the equals() method of Object class. 
+So you can compare the contents of two strings by equals() method.	               StringBuffer class    doesn't override the equals() method of Object class.
+4)String class is slower while performing concatenation operation.	               StringBuffer class is faster while performing concatenation operation.
+5)String class uses String constant pool.	                                       StringBuffer uses Heap memory
+
+
+
+5.Difference between StringBuffer and StringBuilder
+
+ StringBuffer:
+1.StringBuffer is synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously.
+2.StringBuffer is less efficient than StringBuilder.
+3.StringBuffer was introduced in Java 1.0
+
+//code:
+public class BufferTest{  
+    public static void main(String[] args){  
+        StringBuffer buffer=new StringBuffer("hello");  
+        buffer.append("java");  
+        System.out.println(buffer);  
+    }  
+}  
+Output:
+hellojava
+
+StringBuilder:
+1.StringBuilder is non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously.
+2.StringBuilder is more efficient than StringBuffer.
+3.StringBuilder was introduced in Java 1.5
+
+//code
+
+public class BuilderTest{  
+    public static void main(String[] args){  
+        StringBuilder builder=new StringBuilder("hello");  
+        builder.append("java");  
+        System.out.println(builder);  
+    }  
+}  
+Output:
+hellojava
+
+
+6.String Methods:
+
+Method	                                                                                      Description
+1	char charAt(int index)	                                                It returns char value for the particular index
+2	int length()	                                                        It returns string length
+3	static String format(String format, Object... args)	                It returns a formatted string.
+4	static String format(Locale l, String format, Object... args)	        It returns formatted string with given locale.
+5	String substring(int beginIndex)	                                It returns substring for given begin index.
+6	String substring(int beginIndex, int endIndex)	                        It returns substring for given begin index and end index.
+7	boolean contains(CharSequence s)	                                It returns true or false after matching the sequence of char value.
+8	static String join(CharSequence delimiter, CharSequence... elements)	It returns a joined string.
+9	static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements)	It returns a joined string.
+10	boolean equals(Object another)	                                        It checks the equality of string with the given object.
+11	boolean isEmpty()	                                                It checks if string is empty.
+12	String concat(String str)	                                        It concatenates the specified string.
+13	String replace(char old, char new)	                                It replaces all occurrences of the specified char value.
+14	String replace(CharSequence old, CharSequence new)	                It replaces all occurrences of the specified CharSequence.
+15	static String equalsIgnoreCase(String another)	                        It compares another string. It doesn't check case.
+16	String[] split(String regex)	                                        It returns a split string matching regex.
+17	String[] split(String regex, int limit)                          	It returns a split string matching regex and limit.
+18	String intern()	It returns an interned string.
+19	int indexOf(int ch)	                                                It returns the specified char value index.
+20	int indexOf(int ch, int fromIndex)	                                It returns the specified char value index starting with given index.
+21	int indexOf(String substring)	                                        It returns the specified substring index.
+22	int indexOf(String substring, int fromIndex)	                        It returns the specified substring index starting with given index.
+23	String toLowerCase()	                                                It returns a string in lowercase.
+24	String toLowerCase(Locale l)	                                        It returns a string in lowercase using specified locale.
+25	String toUpperCase()	                                                It returns a string in uppercase.
+26	String toUpperCase(Locale l)                                     	It returns a string in uppercase using specified locale.
+27	String trim()	                                                        It removes beginning and ending spaces of this string.
+28	static String valueOf(int value)	                                It converts given type into string. It is an overloaded method.
+
+29.substring()	                                                                Returns a new string which is the substring of a specified string
+
+
+**Refer to your notes for methods 

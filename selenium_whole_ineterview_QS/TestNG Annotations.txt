@@ -1,0 +1,50 @@
+TestNG Annotations:
+1.@Test
+
+2.@beforeMethod
+  @AfterMethod
+
+3.@BeforeClass
+  @AfterClass
+
+4.@BeforeTest
+  @AfterTest
+
+5.@BeforeSuite
+  @AfterSuite
+
+Suite-->Tests-->classes-->Methods
+
+XMl is a suite not packages  -->Test -->classes-->Methods
+
+TC1
+---
+1.login  --@BeforeMethod
+2.search --@Test
+3.Logout --@AfterMehod
+4.Login
+5.Advanced search  --@Test
+6.Logout
+
+TC2
+---
+1.login --@BeforeClass
+2.search --@Test
+3.Advanced Search--@Test
+4.Logout--@Afterclass
+
+
+Dependent Methods
+
+
+Assertions -- use for validations
+
+2 types :
+1.Hard Assertions -- by using assert class u can directly access all methods are static.
+if hard assertion got failed then rest of the statement will not be executed
+2.Soft Assertions -- access through object of soft assert class
+
+softAssert sa = new SoftAssert();
+sa.assestTrue();
+
+if soft assertion got failed then rest of the statements still execute

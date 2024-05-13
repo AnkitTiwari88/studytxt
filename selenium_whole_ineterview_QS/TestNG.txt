@@ -1,0 +1,130 @@
+TestNG Interview Questions:
+
+TestNG Interview Questions and Answers :https://youtube.com/playlist?list=PLNUKIBJDwfVtaQ_629OsOp72q-9d-uz6N&si=zNQDm76IABB4K-sc
+
+1) What is TestNG?
+TestNG stands for "Testing Next Generation". 
+It is an` automation testing framework used for java programming language developed by Credric beust.
+It comes after the inspiration from the JUnit framework. 
+
+
+2) What are the advantages of TestNG?
+The following are the advantages of TestNG are:
+
+It generates the report in a proper format, which includes the following information:
+Number of test cases executed.
+Number of test cases passed.
+Number of test cases failed.
+Number of test cases skipped
+Multiple test cases can be grouped easily by converting them into a testng.xml file, in which you can set the priority of each test case that determines which test case should be executed first.
+With the help of TestNG, you can execute the multiple test cases on multiple browsers known as cross-browser testing.
+The TestNG framework can be easily integrated with other tools such as Maven. Jenkins, etc.
+Annotations used in a TestNG framework are easily understandable such as @BeforeMethod, @AfterMethod, @BeforeTest, @AfterTest.
+WebDriver does not generate the reports while TestNG generates the reports in a readable format.
+TestNG simplifies the way the test cases are coded. We do not have to write the static main method. The sequence of actions is maintained by the annotations only.
+TestNG allows you to execute the test cases separately. For example, if you have six test cases, then one method is written for each test case. When we run the program, five methods are executed successfully, and the sixth method is failed. To remove the error, we need to run only the sixth method, and this can be possible only through TestNG. Because TestNG generates testng-failed.xml file in the test output folder, we will run only this xml file to execute the failed test case.
+
+
+4) What are the annotations used in the TestNG?
+The following are the annotations used in the TestNG are:
+
+Precondition annotations
+Precondition annotations are executed before the execution of test methods The Precondition annotations are @BeforeSuite, @BeforeClass, @BeforeTest, @BeforeMethod.
+Test annotation
+Test annotation is specified before the definition of the test method. It is specified as @Test.
+Postcondition annotations
+The postcondition annotations are executed after the execution of all the test methods. The postcondition annotation can be @AfterSuite, @AfterClass, @AfterTest, @AfterMethod.
+
+
+
+5) What is the sequence of execution of all the annotations in TestNG?
+The sequence of execution of all the annotations in TestNG is given below:
+
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterSuite
+@AfterTest
+@AfterClass
+@AfterMethod
+
+
+6) How to set the priorities in TestNG?
+If we do not prioritize the test methods, then the test methods are selected alphabetically and executed. 
+If we want the test methods to be executed in the sequence we want, then we need to provide the priority along with the @Test annotation.
+
+
+
+8) What is dependency in TestNG?
+When we want to run the test cases in a specific order, then we use the concept of dependency in TestNG.
+
+Two types of dependency attributes used in TestNG:
+
+dependsOnMethods
+The dependsOnMethods attribute tells the TestNG on which methods this test will be dependent on, so that those methods will be executed before this test method.
+
+
+dependsOnGroups
+It is similar to the dependsOnMethods attribute. It allows the test methods to depend on the group of test methods. It executes the group of test methods before the dependent test method.
+
+
+
+10) What is invocationCount in TestNG?
+An invocationCount in TestNG is the number of times that we want to execute the same test.
+
+package com.javatpoint;  
+import org.testng.annotations.Test;  
+public class Test_cases  
+{  
+ @Test(invocationCount=5)  
+ public void testcase1()  
+ {  
+     System.out.println("testcase1");  
+ }  
+  
+}  
+
+
+
+13) How can we disable the test case from running?
+We can disable the test case from running by using the enabled attribute. We can assign the false value to the enabled attribute, in this way we can disable the test case from running.
+
+package com.javatpoint;  
+import org.testng.annotations.Test;  
+public class Test_cases  
+{  
+ @Test(enabled=false)  
+ public void testcase1()  
+ {  
+     System.out.println("testcase1");  
+ }  
+
+
+
+15) What is the use of @Listener annotation in TestNG?
+TestNG provides different kinds of listeners which can perform different actions whenever the event is triggered. The most widely used listener in TestNG is ITestListener interface. The ITestListener interface contains methods such as onTestSuccess, onTestfailure, onTestSkipped, etc.
+
+Following are the scenarios that can be made:
+
+If the test case is failed, then what action should be performed by the listener.
+If the test case is passed, then what action should be performed by the listener.
+If the test case is skipped, then what action should be performed by the listener.
+
+
+
+17) What is the difference between @Factory and @DataProvider annotation?
+@DataProvider: It is annotation used by TestNG to execute the test method multiple numbers of times based on the data provided by the DataProvider.
+
+@Factory: It is annotation used by the TestNG to execute the test methods present in the same test class using different instances of the respective class.
+
+
+
+
+
+
+
+
+
+

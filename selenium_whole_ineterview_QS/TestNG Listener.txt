@@ -1,0 +1,65 @@
+TestNG Listeners:defining the post actions [updating & generating report]
+
+post actions : based on the result of actions 
+into perform post actions using TestNG listener concept
+
+ex:report generation 
+
+ITestListener -->is an interface  
+TestListenrAdapter -->class
+
+methods use in post actions : these are default methods
+
+onTestStart()   
+onTestFailure()
+onTestSuccess()
+onTestSkipped()
+onFinish()
+
+---
+---
+
+Step1: create test case using test methods()
+step 2: create listener class [should be implemented using ITestListener,TestListenerAdapter] then write onTestStart(),onTestFailure()...methods
+step 3: create an xml contains test cases along with listener class[it will catch test data from step 1 and match with step 2 if test method is passed or failed then it will automatically trigger]
+<listeners>
+<listener class ="package.listenerclassname"/>
+</listeners>
+
+
+Extent Report:
+
+1.add dependencies
+2.create test case
+3.create listener class
+4.create xml file
+
+
+1.ITestResult -- another kind of interface and this is basically type of variable
+result -- is a variable ,capture all the infromation of test mathods
+
+all onTestStart(ITestContext context),onTestFailure(ITestResult result),onTestSuccess(ITestResult result),onTestSkipped(ITestResult result)
+
+
+2.onFinish(ITestContext context)  //only finish method is different
+
+Extend Report:
+not belong to java selenium it a third party reports thats why add extendsReport dependencies
+
+
+
+
+Listener class has own class name 
+1.ExtentSparkReporter = responsible for UI of report
+2.ExtentReports=populate common info on the report
+3.ExtentTest = creating test senarios in the report and update status of test methods
+
+Each classes having own methods.
+
+System.getPropert("user.dir") == it will give current loaction of the project
+
+extend.flush() = is used for onFinish() method
+
+
+q. Without XML file will u be able to integrate test methods and listener class?
+  =by using @Listener(package.className.class)

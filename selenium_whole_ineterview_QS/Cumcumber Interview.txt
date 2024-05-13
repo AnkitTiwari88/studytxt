@@ -1,0 +1,101 @@
+1.Cumcumber:
+
+Cumcumber is a tool that is based on Behaviour Driven Development(BDD) methodology.
+
+The main aim of BDD framework is to make various project roles such as Business Analysts,Quality Assurance,Developers etc,understand the application without diving deep into technical aspects.
+
+2. what language is used by cucumber?
+
+Gherkin is the language that is used by the cucumber tool.It is a simple English representation of the application behaviour.
+
+Gherkin language uses several keywords to describe the behaviour of the application such as Feature,Scenario,Outline,Given,When,Then etc.
+
+3. Feature File:
+A feature file provide a high-level description of an application under Test(AUT).The first line of the feature file must start with the keyword 'Feature' following the description of the application under test.
+
+A feature file extension '.feature'
+
+4. What are the various keywords that are used in Cucumber for writing a scenario?
+
+Given
+When
+Then
+And
+
+5.What programming language is used by cucumber?
+java,.Net,Ruby etc. It can also be itegrated with multiple tools such as Selenium.
+
+6.step definition File:
+
+is used to segrate the feature file from the underlying code.
+each step of the feature file can be mapped to a corresponding method on the step definition file.
+While feature files are written in an easily understandable language such as Gherkin ,Step Definition files are written in programming languages such as java,.Net,Ruby etc.
+
+7.Advantages of Cucumber Framework:
+
+1.It is a open source tool
+2.Plain text representation makes it easier for non-technical users to undetstand the scenarios.
+3.It bridge the communication gap between various project stakeholders such as Business Analysts,Developers and Quality Assurance personnel
+4.Automation test cases developed using the Cucumber tool are easier to maintain and understand as well
+5.Easy to itegrate with other tools such as selenium.
+
+8.Scenario Outline:
+
+Senario outline is a way of parameterization of senarios.
+This is ideally used when the scenario needs to be executed for multiple sets of data,However,the test steps remain the same.
+Scenario Outline must be followed bt THe keyword 'Examples',which specify the set of values for each parameter.
+
+EX: Senario Outline:Upload a file
+
+Given that the user is on upload file screen.
+When a user clicks on the Browser button.
+And user enters<filename> onto the upload textboxes.
+And user clicks on the enter button.
+Then verify that file upload is successful.
+
+
+9.BDD methodology:
+
+BDD is a methodology to understand the functioanlity of an application in simple plain text represenation.
+The main aim of BDD framework is to make various project roles such as Business Analysts,Quality Assurance,Developers,Support team understand the application without diving deep into the technical aspects.
+
+10.What is the limit for the maximum no of senarios that can be included in feature file?
+
+A feature file can contain a maximum 10 scenarios,but the number can vary from project to project and from one organization to another.
+
+11.Uses of Backgroud keyword in Cucumber?
+
+is used to group multiple given statements into a single group.
+This is generally used when the same set of given statements are repeated in each scenario of the feature file.
+
+12. what is the symbol of parameterization in Cumcumber?
+
+Pipe symbol(|) is used to specify one or more parameter values in feature file.
+
+13.what is the purpose of Cumcumber Options tag?
+
+It is used to provide a link between the feature file and step definitions files.Ecah step of the feature file is mapped to a corresponding method on the step definition file.
+
+Syntax:
+@CucumberOptions(feature="Features",glue={"StepDefinition"})
+
+14.when is Cumcumber used in real time?
+
+Cucumber tool is generally used in real time to write acceptance tests for an application.It is generally used by non-technicalpeople such as Bussiness Analysts,Functional Tester etc.
+
+15.what is the name of the plugin that is used to integrated Eclipse with Cucumber?
+Cucumber Natural Plugin
+
+16.Test Runner Class:
+It is used to provide the link between feature file and step definition file.
+A TestRunner class is generally an empty class with no class definition.
+
+17.Should any code be written within TestRunner class?
+It should include the tags @RunWith and @CucumberOptions
+
+
+18.What is the use of feature property under Cucumber Options tag?
+Features property is used to let Cucumber framework identify the loaction of the features files.
+
+19.what is the use of glue property under Cucumber Options tag?
+Glue property is used to let Cucumber framework identify the loaction of step definitions files.

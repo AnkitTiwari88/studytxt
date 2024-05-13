@@ -1,0 +1,34 @@
+Top Page Object Model(POM) Interview Questions and Answers (2023):
+
+1. What is a page object model?
+The Page Object Model design pattern has become popular in test automation for reducing code duplication and enhancing test maintenance. A page object represents a page of your AUT in an object-oriented way. 
+
+
+2. What is a page object model in Selenium?
+A Page Object Model is a Selenium design pattern in which the various elements of a web page are represented as variables within classes.
+
+
+ 3. Is Page object model a framework?
+No, POM (Page Object Model) is not a framework
+Design Patterns such as Page Object Model are becoming popular in automating Selenium tests. Any kind of framework can use Page Object Model (POM), including modular, data-driven, keyword-driven, and hybrid frameworks.
+
+
+4. What is the Page Factory Class?
+Using the Page Factory Class, we extend the Page Object design pattern. Page Objects or their elements can be initialized using this method. It is also possible to create annotations for elements, since the describing properties may not always be sufficiently descriptive to tell one object from another. This is also one of the basic POM Interview Questions.
+
+
+5. What is the difference between Page Object Model (POM) and Page Factory?
+'Page Objects' are classes that represent web pages and contain all of their functionality and members.
+
+Page Factory lets you initialize the elements which you want to interact with within a page object as soon as you create an instance of it. This is one of the most asked POM Interview Questions.
+
+
+6. What is Test Class?
+We will write a real Selenium test script in Test Class. In this case, we refer to Page Actions as the actions performed on Web Pages. Our own test classes can be written for each page for better code readability. @Test annotations can be used to write test cases.
+
+
+7. What is Page Action Class?
+The Page Action Class allows us to write web pages actions according to the page and functionality. For each page in the application, we have a corresponding Page class under the Page Action component.
+
+
+

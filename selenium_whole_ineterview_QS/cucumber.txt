@@ -1,0 +1,26 @@
+Cucumber Interview Questions for Freshers
+
+1) What is Cucumber? What are the advantages of Cucumber?
+To run functional tests written in a plain text Cucumber tool is used. It is written in a Ruby programming language.
+
+Advantages of Cucumber are:
+
+You can involve business stakeholders who cannot code
+End-user experience is a priority
+High code reuse
+
+
+2) What are the two files required to execute a Cucumber test scenario?
+Two files required to execute a Cucumber test scenario are
+
+Features
+Step Definition
+
+
+3) explain the use of Background keyword in Cucumber?
+Background keyword is used to group multiple given statements into a single group. 
+The keyword mostly used when the same set of given statements are repeated in each scenario of the feature file.
+
+
+
+

@@ -1,0 +1,48 @@
+TestNG -- Test New Generation -- java based unit testing tool
+
+predefined framework
+
+developers use for unit testing
+
+generate reporting
+
+advantages:                                                                                                                                                                                 
+1.Test cases & test suites(group of test cases)
+2.grouping of test cases
+3.priotize
+4.parameterization(passing parametes in test cases)
+5.parallel testing
+6.reports
+
+java/maven project -->webdriver-->testNG
+
+1.by adding dependency
+2.by installing testing plugin in eclipse
+
+
+Window-->Preferences-->TestNG
+
+Add testing dependency to pom.xml
+
+TestSuite -->Test cases -->Test Steps
+Package -->Classes -->TestMethods
+
+**** we do not have main method
+
+
+Test case
+---
+1.open app
+2.login
+3.close
+
+
+
+//priority = control the power of execution
+
+
+if u don't add @Test annotations then testing will not the method
+
+XML File
+1.create manually
+2.generate automatically
